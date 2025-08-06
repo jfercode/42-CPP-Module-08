@@ -6,7 +6,7 @@
 /*   By: jaferna2 <jaferna2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 11:38:26 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/08/05 11:51:22 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/08/06 10:46:23 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 
 int	main(void)
 {
+	/*------------------------------------------------------------*/
+	/* EASYFIND TESTS USING STD::VECTOR                           */
+	/*------------------------------------------------------------*/
 	try
 	{
 		std::cout << "/*** FIRST TEST WITH STD::VECTOR ***/" << std::endl;
@@ -36,6 +39,10 @@ int	main(void)
 	{
 		std::cerr << "Vector error: " << e.what() << '\n';
 	}
+	
+	/*------------------------------------------------------------*/
+	/* EASYFIND TESTS USING STD::LIST                             */
+	/*------------------------------------------------------------*/
 	try
 	{
 		std::cout << "/*** FIRST TEST WITH STD::LIST ***/" << std::endl;
@@ -55,6 +62,10 @@ int	main(void)
 	{
 		std::cerr << "List error: " << e.what() << '\n';
 	}
+
+	/*------------------------------------------------------------*/
+	/* EASYFIND TESTS USING STD::DEQUE                            */
+	/*------------------------------------------------------------*/
 	try
 	{
 		std::cout << "/*** FIRST TEST WITH STD::LIST ***/" << std::endl;
