@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaferna2 <jaferna2@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:10:00 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/08/05 13:08:53 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/08/12 13:20:19 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,9 @@ int	main(void)
 	try
 	{
 		std::cout << "\n/*** TEST: DUPLICATE VALUE ***/" << std::endl;
-		Span sp(2);
+		Span sp(3);
 		sp.addNumber(10);
+		sp.addNumber(5);
 		sp.addNumber(10);
 	}
 	catch (const std::exception& e)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaferna2 <jaferna2@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 13:52:29 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/08/05 14:01:22 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/08/12 13:17:10 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void print_container(const std::string& name, const T& container)
 int main(void)
 {
     /*------------------------------------------------------------*/
-    /* MUTANTSTACK BASIC FUNCTIONALITY               */
+    /* MUTANTSTACK BASIC FUNCTIONALITY                            */
     /*------------------------------------------------------------*/
     try
     {
@@ -49,32 +49,13 @@ int main(void)
 
         std::cout << "Popping an element..." << std::endl;
         mstack.pop();
+        print_container("Popping MutantStack", mstack);
         std::cout << "New top element: " << mstack.top() << std::endl;
         std::cout << "New size: " << mstack.size() << std::endl;
     }
     catch (const std::exception& e)
     {
         std::cerr << "Error: " << e.what() << std::endl;
-    }
-    std::cout << std::endl;
-
-    /*------------------------------------------------------------*/
-    /* MUTANTSTACK EMPTY ACCESS TEST               */
-    /*------------------------------------------------------------*/
-    try
-    {
-        std::cout << "/*** MUTANTSTACK: ATTEMPTING TO ACCESS EMPTY STACK ***/" << std::endl;
-        MutantStack<int> empty_stack;
-       	if (empty_stack.empty())
-        {
-            std::cout << "Empty stack. Can't access to top element!!!." << std::endl;
-        }
-        else
-            std::cout << "Top element: " << empty_stack.top() << std::endl;
-    }
-    catch (const std::exception& e)
-    {
-        std::cerr << "Expected error: " << e.what() << std::endl;
     }
     std::cout << std::endl;
 
@@ -99,6 +80,7 @@ int main(void)
 
         std::cout << "Popping an element..." << std::endl;
         my_list.pop_back();
+        print_container("Popping std::list", my_list);
         std::cout << "New last element: " << my_list.back() << std::endl;
         std::cout << "New size: " << my_list.size() << std::endl;
     }
@@ -107,6 +89,25 @@ int main(void)
         std::cerr << "Error: " << e.what() << std::endl;
     }
     std::cout << std::endl;
+
+     /*------------------------------------------------------------*/
+    /* MUTANTSTACK EMPTY ACCESS TEST               */
+    /*------------------------------------------------------------*/
+    try
+    {
+        std::cout << "/*** MUTANTSTACK: ATTEMPTING TO ACCESS EMPTY STACK ***/" << std::endl;
+        MutantStack<int> empty_stack;
+       	if (empty_stack.empty())
+        {
+            throw std::runtime_error("Empty stack. Can't access to top element!!!.");
+        }
+        else
+            std::cout << "Top element: " << empty_stack.top() << std::endl;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Expected error: " << e.what() << std::endl;
+    }
 
     return (EXIT_SUCCESS);
 }
