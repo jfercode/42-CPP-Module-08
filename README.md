@@ -9,14 +9,13 @@
 ## 📚 Tabla de Contenidos
 
 1. [¿Qué son los contenedores, iteradores y algoritmos STL?](#-qué-son-los-contenedores-iteradores-y-algoritmos-stl)
-2. [Reglas Generales del Módulo](#-reglas-generales-del-módulo)
-3. [Reglas Específicas del Módulo](#-reglas-específicas-del-módulo)
-4. [Ejercicio 00 – EasyFind](#ejercicio-00--easyfind)
-5. [Ejercicio 01 – Span](#ejercicio-01--span)
-6. [Ejercicio 02 – MutantStack](#ejercicio-02--mutantstack)
-7. [Tabla Resumen de STL y Algoritmos](#-tabla-resumen-de-stl-y-algoritmos)
-8. [Errores Comunes](#-errores-comunes)
-9. [Buenas Prácticas](#-buenas-prácticas)
+2. [Reglas Específicas del Módulo](#-reglas-específicas-del-módulo)
+3. [Ejercicio 00 – EasyFind](#ejercicio-00--easyfind)
+4. [Ejercicio 01 – Span](#ejercicio-01--span)
+5. [Ejercicio 02 – MutantStack](#ejercicio-02--mutantstack)
+6. [Tabla Resumen de STL y Algoritmos](#-tabla-resumen-de-stl-y-algoritmos)
+7. [Errores Comunes](#-errores-comunes)
+8. [Buenas Prácticas](#-buenas-prácticas)
 
 ---
 
@@ -29,22 +28,6 @@ La **STL (Standard Template Library)** de C++ proporciona herramientas genérica
 - **Algoritmos**: Funciones como `find`, `sort`, `copy`, `for_each`, etc., que operan sobre rangos definidos por iteradores, permitiendo manipular los datos de los contenedores eficientemente.
 
 El dominio de estos elementos es fundamental para programar en C++ de forma moderna, limpia y eficiente.
-
----
-
-## 🔹 Reglas Generales del Módulo
-
-- **Compilación**:  
-  - Usar: `c++ -Wall -Wextra -Werror`
-  - El código debe compilar con: `-std=c++98`
-- **Nomenclatura y Formato**:  
-  - Directorios: `ex00`, `ex01`, `ex02`, ...
-  - Archivos de clases: `ClassName.hpp`/`.h` y `.cpp`/`.tpp` según corresponda.
-  - Clases en UpperCamelCase; archivos con include guards.
-- **Restricciones**:  
-  - Prohibido: C++11/Boost, funciones `*printf()`, `*alloc()`, `free()`, `using namespace`, `friend`.
-  - Permitido: Toda la STL desde este módulo, tanto contenedores como algoritmos.
-  - Evitar memory leaks y cumplir la Orthodox Canonical Form desde el módulo 02.
 
 ---
 
